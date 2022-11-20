@@ -1,31 +1,54 @@
 .startscreen {
-    background-image: url('/assets/img/startscreen.jpg');
+    background-image: url('/assets/img/background.jpg');
     background-size: cover;
     width: 100vw;
     height: 100vh;
     max-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+
+    @media (max-width: 960px) {
+        overflow: hidden;
+    }    
 
     h1 {
-        color: rgb(68, 183, 236);
-        font-size: 100px;
+        color: rgb(207, 14, 24);
+        font-size: 130px;
     }
 }
 
 .start-Button {
      margin: 0;
      position: absolute;
-     top: 50%;
-     left: 50%;
+     top: 60%;
+     left: 45%;
      
      button {
         height: 50px;
-        width: 200px;
+        width: 160px;
+        border-radius: 10px;
         font-size: 25px;
         cursor: pointer;
-        background-color: rgb(68, 183, 236);
+        background-color: rgb(12, 211, 72);
+        color: #fff;
+
+        &:hover {
+            filter: brightness(1.10);
+        }
      }
 }
+
+.start-Button {
+
+    width: 40vw;
+    height: auto;
+
+    @media (max-width: 960px) {
+        overflow: hidden;
+        width: 400px;
+    }    
+}
+
 
 

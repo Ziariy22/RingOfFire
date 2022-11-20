@@ -1,13 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Game } from 'src/models/game';
 
 @Component({
-  selector: 'app-player',
-  templateUrl: './player.component.html',
-  styleUrls: ['./player.component.scss']
+  selector: 'app-player-mobiel',
+  templateUrl: './player-mobiel.component.html',
+  styleUrls: ['./player-mobiel.component.scss']
 })
-export class PlayerComponent implements OnInit {
-
+export class PlayerMobielComponent implements OnInit {
+  
   @Input() name: string="";
   @Input() image: string="";
   @Input() playerActive: boolean = false;
@@ -15,15 +15,15 @@ export class PlayerComponent implements OnInit {
   game!: Game;
   playerImg: string = '';
 
-  constructor() { 
+  constructor() {
     for(let j = 1; j < 5; j++) {
       this.playersImg.push('player_'+j);
     }
     shuffle(this.playersImg);
-  }
+   }
 
   ngOnInit(): void {
-      
+
     this.playerImg = this.playersImg.pop()!;
   }
 
