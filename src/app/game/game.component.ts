@@ -22,6 +22,10 @@ export class GameComponent implements OnInit {
 
   ngOnInit(): void {
     this.newGame();
+    setTimeout(() => {
+      this.openDialog();
+    }, 500);
+
     this.route.params.subscribe((params) => {
       this.gameId = params['id'];
 
@@ -48,8 +52,8 @@ export class GameComponent implements OnInit {
   }
 
   takeCard() {
-    if (this.game.stack.length == 0) {
-      this.gameOver = true;
+    if (this.game.players.length < 2) {
+      this.openDialog();
     } else if (!this.game.pickCardAnimation) {
     this.game.currentCard = this.game.stack.pop()!;
    

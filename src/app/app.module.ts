@@ -23,6 +23,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireModule } from '@angular/fire/compat';
 import { PlayerMobielComponent } from './player-mobiel/player-mobiel.component';
 import { EditPlayerComponent } from './edit-player/edit-player.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 
 
@@ -52,7 +54,8 @@ import { EditPlayerComponent } from './edit-player/edit-player.component';
     provideAuth(() => getAuth()),
     provideDatabase(() => getDatabase()),
     provideFirestore(() => getFirestore()),
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]
