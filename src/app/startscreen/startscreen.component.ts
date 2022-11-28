@@ -18,6 +18,10 @@ export class StartscreenComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  /**
+   * starts the game by clicking the button and loads data to firestore
+   */
   async newGame() {
     // Start game
     let game = new Game();
@@ -27,7 +31,6 @@ export class StartscreenComponent implements OnInit {
     .then((gameInfo: any) => {
       this.router.navigateByUrl('/game/' + gameInfo.id);
     });
-
   }
 
 }

@@ -7,6 +7,10 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class GameInfoComponent implements OnInit, OnChanges {
 
+
+  /**
+   * JSON-Array of the dialog-text
+   */
   cardAction = [
     { title: 'Waterfall', description: 'Everyone has to start drinking at the same time. As soon as player 1 stops drinking, player 2 may stop drinking. Player 3 may stop as soon as player 2 stops drinking, and so on.' },
     { title: 'You', description: 'You decide who drinks' },
@@ -33,6 +37,10 @@ export class GameInfoComponent implements OnInit, OnChanges {
    
   }
 
+
+  /**
+   * the next dialog shows up by picking a card
+   */
   ngOnChanges(): void{
     if (this.card) {
     let cardNumber = +this.card.split('_')[1];

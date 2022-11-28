@@ -7,6 +7,7 @@ export class Game {
     public pickCardAnimation = false;
     public currentCard: string = '';
 
+    
     constructor() {
         for (let i = 1; i < 14; i++) {
             this.stack.push('ace_' + i);
@@ -31,6 +32,12 @@ export class Game {
     }
 }
 
+
+/**
+ * shuffles all cards from the card-stack
+ * @param array 
+ * @returns array
+ */
 function shuffle(array: string[]) {
     let currentIndex = array.length,  randomIndex;
   

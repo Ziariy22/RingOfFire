@@ -1,3 +1,4 @@
+<!-- player -->
 <app-player
   (click)="editPlayer(i)"
   *ngFor="let player of game.players; let i = index"
@@ -8,6 +9,7 @@
   class="player-position hide-mobile"
 ></app-player>
 
+<!-- player-on-mobile -->
 <div class="scroll-container hide-desktop">
   <app-player-mobiel
     (click)="editPlayer(i)"
@@ -55,12 +57,14 @@
   </div>
 </div>
 
+<!-- info -->
 <app-game-info
   *ngIf="!gameOver"
   [card]="game.currentCard"
   class="pin-bottom"
 ></app-game-info>
 
+<!-- add-player-button -->
 <button
   *ngIf="!gameOver"
   mat-fab
@@ -72,6 +76,7 @@
   <mat-icon>add</mat-icon>
 </button>
 
+<!-- back-to-startscreen-button -->
 <div>
   <img routerLink="/startscreen" class="back-arrow" src="assets/img/undo.png" />
 </div>

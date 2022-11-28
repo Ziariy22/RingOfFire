@@ -15,6 +15,10 @@ export class EditPlayerComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  /**
+   * closing the dialog by clicking the button 
+   */
   onNoClick(){
     this.dialogRef.close();
   }

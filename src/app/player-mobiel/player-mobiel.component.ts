@@ -23,10 +23,8 @@ export class PlayerMobielComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.playerImg = this.playersImg.pop()!;
   }
-
 }
 
 function shuffle(array: string[]) {

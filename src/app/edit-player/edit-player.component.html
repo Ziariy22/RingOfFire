@@ -1,5 +1,7 @@
+<!-- title -->
 <h1 mat-dialog-title>Edit player</h1>
 
+<!-- image -->
 <img
   class="profile-picture"
   [mat-dialog-close]="picture"
@@ -7,6 +9,7 @@
   src="assets/img/{{ picture }}"
 />
 
+<!-- buttons -->
 <div mat-dialog-actions>
   <button mat-button (click)="dialogRef.close()">Close</button>
   <button mat-button color="warn" [mat-dialog-close]="'DELETE'" cdkFocusInitial>
